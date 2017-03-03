@@ -73,14 +73,22 @@ public class IO {
         return n;
     }
 
-    static String getString(String message){
+    public static double getDouble(String prompt){
+        System.out.println(prompt);
+        double n = scan.nextDouble(); //alt + Enter here...
+        return n;
+    }
+
+
+
+    public static String getString(String message){
         if (!message.endsWith(":") && !message.endsWith(": "))
             message+=": ";
         System.out.println(message);
         return scan.next();
     }
 
-    static String getSentence(String prompt){
+    public static String getSentence(String prompt){
         System.out.println(prompt);
         return scan.nextLine();
     }

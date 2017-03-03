@@ -30,7 +30,7 @@ public class Main {
         f.bookFlight(vIPPassenger);
         f.bookFlight(moe);
 
-        
+
 //        double priceToPay = p.priceToPay(100);
 
 //        System.out.println(p.toString());
