@@ -35,7 +35,7 @@ public class Player {
 
     public Player(String firstName, String lastName, double percentFromLine,
                   double percentFromField, double percentFromThree,
-                  double height, int shirtNumber, DateUtils birthDate) {
+                  double height, int shirtNumber, DateUtils birthDate, String category) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.percentFromLine = percentFromLine;
@@ -44,6 +44,8 @@ public class Player {
         this.height = height;
         this.shirtNumber = shirtNumber;
         this.birthDate = birthDate;
+        this.category = category;
+
     }
 
     public boolean throwFromLine (){
