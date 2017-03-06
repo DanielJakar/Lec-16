@@ -70,9 +70,44 @@ public class Player {
     }
 
 
-    public String toString (){
-        return "Name: " + firstName + " " + lastName +
-                "\nPercent from Line: " + percentFromLine +
-                "\nPercent from field: " + percentFromField;
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public double getPercentFromLine() {
+        return percentFromLine;
+    }
+
+    public double getPercentFromField() {
+        return percentFromField;
+    }
+
+    public double getPercentFromThree() {
+        return percentFromThree;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public int getShirtNumber() {
+        return shirtNumber;
+    }
+
+    public DateUtils getBirthDate() {
+        return birthDate;
+    }
+
+    public String getCategory() {
+        return category;
     }
 }
