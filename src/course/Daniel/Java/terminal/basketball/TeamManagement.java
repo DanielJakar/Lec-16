@@ -43,10 +43,14 @@ public class TeamManagement {
 
     }
 
-    public void teamFromThree(){
+    public int teamFromThree(){
+        int score = 0;
         for (Player player : team) {
             boolean didScore = player.throwFromThree();
+            System.out.print(player.getFirstName() + " ");
             System.out.println(didScore?"scored": "Missed...");
+            score += didScore? 3: 0;
         }
+        return score;
     }
 }

@@ -10,13 +10,16 @@ public class Defense extends Player {
     private static String category = "Defense";
     private int blocks;
 
-    public Defense(String category) {
-        this.blocks = IO.getInt("Enter number of blocked shots per game:");
-    }
 
     public Defense(String firstName, String lastName, double percentFromLine, double percentFromField, double percentFromThree, double height, int shirtNumber, DateUtils birthDate, String category, int blocks) {
-        super(firstName, lastName, percentFromLine, percentFromField, percentFromThree, height, shirtNumber, birthDate, category);
+        super(firstName, lastName, percentFromLine, percentFromField, percentFromThree, height, shirtNumber, birthDate, "Defense");
         this.blocks = blocks;
+    }
+
+    public Defense() {
+        super();
+        this.blocks = IO.getInt("Enter number of blocked shots per game:");
+        setCategory(getClass().getSimpleName());
     }
 
     public int getBlocks() {
