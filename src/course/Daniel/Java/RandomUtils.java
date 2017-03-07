@@ -20,7 +20,7 @@ public class RandomUtils {
      * @param max the max value
      * @return a random number from min to max
      */
-    static int nextRandom(int min, int max){
+    public static int nextRandom(int min, int max){
         Random randGen = new Random();
         int diff = max - min;
         int rand = randGen.nextInt(diff + 1);

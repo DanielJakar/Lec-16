@@ -1,5 +1,7 @@
 package course.Daniel.Java.terminal.basketball;
 
+import course.Daniel.Java.IO;
+
 import java.util.ArrayList;
 
 /**
@@ -7,23 +9,44 @@ import java.util.ArrayList;
  */
 public class TeamManagement {
     private ArrayList<Player> team = new ArrayList<>();
+    public String name;
 
-    public void addPlayer (Player player){
-        team.add(player);
+    public TeamManagement(String name) {
+        this.name = name;
     }
 
-    public void printTeam(){
-        if (team.size() == 0){
-            System.out.println("There are currently no team members!");
+    public TeamManagement() {
+        name = IO.getString("Enter team name:");
+    }
+
+    public void add(){
+        int choice = IO.getInt("Enter 1 for Offense\n" +
+                "2 for Defence\n" +
+                "3 for Pointguard:");
+        switch (choice){
+            case 1:
+                team.add(new Offense());
+                break;
+            case 2:
+                team.add(new Defense());
+                break;
+            case 3:
+                team.add(new PointGuard());
         }
-        else {
-            for (Player player : team) {
-                System.out.println(player);
-                String cat = player.getCategory();
-                if (cat.equals("defense")){
-                    System.out.println();
-                }
-            }
+    }
+
+    public void printTeam (){
+        for (Player player : team) {
+            System.out.println(player);
+        }
+
+
+    }
+
+    public void teamFromThree(){
+        for (Player player : team) {
+            boolean didScore = player.throwFromThree();
+            System.out.println(didScore?"scored": "Missed...");
         }
     }
 }
