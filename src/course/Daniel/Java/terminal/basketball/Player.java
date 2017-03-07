@@ -10,7 +10,7 @@ import java.util.Random;
 /**
  * Created by Jakars on 03/03/2017.
  */
-public class Player {
+public abstract class Player {
     private String firstName;
     private String lastName;
     private double percentFromLine;
